@@ -9,7 +9,6 @@ public class Main {
         String password = "****";
         boolean connected;
 
-
         try {
             //Creating JDBC and connecting to db
             JDBC jdbc = new JDBC(url, username, password);
