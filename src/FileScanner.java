@@ -11,8 +11,6 @@ public class FileScanner {
     private List<String> loadedValues;
 
     public FileScanner(String fileName) throws Exception {
-        File file = new File("location.test");
-        file.createNewFile();
         this.fileName = fileName;
         readFromFile();
 
