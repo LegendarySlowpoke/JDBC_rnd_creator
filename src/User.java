@@ -7,14 +7,17 @@ public class User {
     private String phoneNumber;
     private String email;
     private String password;
+    private String passwordHash;
 
-    public User(String name, String surname, String tag, String phoneNumber, String email, String password) {
+    public User(String name, String surname, String tag, String phoneNumber, String email, String password,
+                String passwordHash) {
         this.name = name;
         this.surname = surname;
         this.tag = tag;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
+        this.passwordHash = passwordHash;
     }
 
     public String getName() {
@@ -63,5 +66,19 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    public String getInfo() {
+        return "name " + name + ", surname " + surname + ", userTAG " + tag +
+                ", phoneNumber " + phoneNumber + ", email " + email +
+                ", passHash " + passwordHash + ", password " + password;
     }
 }

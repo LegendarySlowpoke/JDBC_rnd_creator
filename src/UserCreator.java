@@ -30,8 +30,9 @@ public class UserCreator {
         String phoneNumber = String.valueOf(phoneNumberGenerator());
         String email = emailGenerator(name,surname);
         String password = passwordGenerator();
+        String passwordHash = encryptThisString(password);
 
-        return new User(name, surname, tag, phoneNumber, email, password);
+        return new User(name, surname, tag, phoneNumber, email, password, passwordHash);
     }
 
     private int phoneNumberGenerator() {
@@ -53,7 +54,7 @@ public class UserCreator {
             char ch = (char) random.nextInt(48, 119);
             password = password + ch;
         }
-        return encryptThisString(password);
+        return password;
     }
 
     private String encryptThisString(String input) {
