@@ -1,4 +1,5 @@
 public class SQLconnection {
+
     private String username;
     private String password;
     private String serverUrl;

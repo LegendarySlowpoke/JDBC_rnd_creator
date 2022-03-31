@@ -1,5 +1,3 @@
-import java.util.concurrent.Semaphore;
-
 public class User {
     private String name;
     private String surname;

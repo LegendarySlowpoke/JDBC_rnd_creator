@@ -1,4 +1,5 @@
 public class Main {
+
     public static String serverURL;
 
     //args dbURL[0], username[1], password[2]

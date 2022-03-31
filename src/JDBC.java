@@ -1,5 +1,6 @@
 import java.sql.*;
 
+
 public class JDBC {
     private final SQLconnection sqLconnection;
     private final String url;

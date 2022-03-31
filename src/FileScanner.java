@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class FileScanner {
 
+
     private String filePathBasic = "dataForGenerating/";
     private String fileName;
     private List<String> loadedValues;
