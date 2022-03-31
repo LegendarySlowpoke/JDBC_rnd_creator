@@ -1,14 +1,20 @@
 public class SQLconnection {
     private String username;
     private String password;
-    private String url;
+    private String serverUrl;
+    private String dbName;
     private String tableName;
 
-    public SQLconnection(String username, String password, String url, String tableName) {
+    public SQLconnection(String username, String password, String serverUrl, String dbName, String tableName) {
         this.username = username;
         this.password = password;
-        this.url = url;
+        this.serverUrl = serverUrl;
+        this.dbName = dbName;
         this.tableName = tableName;
+    }
+
+    public String getFullUrlToDB() {
+        return serverUrl + dbName;
     }
 
     public String getUsername() {
@@ -27,12 +33,12 @@ public class SQLconnection {
         this.password = password;
     }
 
-    public String getUrl() {
-        return url;
+    public String getDbName() {
+        return dbName;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
     public String getTableName() {
